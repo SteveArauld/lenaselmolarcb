@@ -26,6 +26,13 @@ class CatalogSeeder extends Seeder
         }
 
         $raw = require base_path('config/loja_products.php');
+        $pelletsHogar = base_path('config/pellets_hogar_products.php');
+        if (is_file($pelletsHogar)) {
+            $extra = require $pelletsHogar;
+            if (is_array($extra)) {
+                $raw = array_merge($raw, $extra);
+            }
+        }
 
         foreach ($raw as $entry) {
             if (! is_array($entry) || empty($entry['id'])) {
