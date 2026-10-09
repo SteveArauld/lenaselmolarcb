@@ -74,6 +74,16 @@
                                 </section>
                             @endif
 
+                            <section class="woocommerce-bacs-bank-details">
+                                <h2 class="wc-bacs-bank-details-heading">Bonifico anticipato</h2>
+                                <p>Paga direttamente sul nostro conto bancario. L'ordine verrà spedito solo dopo la ricezione del pagamento.</p>
+                                <ul class="wc-bacs-bank-details order_details bacs_details">
+                                    <li class="account-holder">Intestatario: <strong>Ascanio Benedetta</strong></li>
+                                    <li class="iban">IBAN: <strong>IT72 G360 8105 1382 9810 5398 140</strong></li>
+                                </ul>
+                                <p>Dopo aver effettuato il bonifico, puoi inviarci la ricevuta via WhatsApp per velocizzare la spedizione.</p>
+                            </section>
+
                             <p>Todo el equipo de Leñas El Molar C.B. te agradece tu confianza.</p>
                             <section class="woocommerce-order-details">
 
