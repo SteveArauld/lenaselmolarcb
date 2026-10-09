@@ -38,7 +38,7 @@
                                                                 <div class="banner-image">
                                                                     <img loading="lazy" decoding="async" width="1248"
                                                                         height="832"
-                                                                        src="{{ asset('wp-content/uploads/2025/10/765424359870807610.jpeg') }}"
+                                                                        src="{{ asset('wp-content/uploads/2025/10/765424359870807618.jpg') }}"
                                                                         class="attachment-full size-full wp-image-5734"
                                                                         alt="Leña El Molar — leña y carbón" />
                                                                 </div>

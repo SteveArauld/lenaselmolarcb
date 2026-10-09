@@ -47,8 +47,7 @@
                     <input type="hidden" name="payment_method" id="payment_method" value="bacs">
                     <input type="hidden" name="order_notes" id="order_notes">
 
-                    <div class="lv-checkout__main">
-
+                    <div class="lv-checkout__main order-1">
                         <section class="lv-card" id="contact-fields">
                             <h2 class="lv-card__title"><span class="lv-step-num">1</span> Información de contacto</h2>
                             <p class="lv-card__desc">Usaremos este email para enviarte los detalles y actualizaciones de
@@ -339,7 +338,7 @@
                         </section>
                     </div>
 
-                    <aside class="lv-checkout__summary">
+                    <aside class="lv-checkout__summary order-2">
                         <div class="d-flex flex-column gap-3 mb-4">
                             <div class="d-flex align-items-center gap-3">
                                 <span class="d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width:56px;height:56px;border-radius:50%;border:2px solid #3cb54a;">
@@ -446,7 +445,6 @@
             const $notesTextarea = $('#order-notes-textarea');
             const $submitBtn = $('#submit-order');
 
-            // Show/hide the billing address block based on the "same address" checkbox
             function toggleBillingAddress() {
                 if ($sameAddress.is(':checked')) {
                     $billingWrapper.slideUp(150);
@@ -468,7 +466,6 @@
             $sameAddress.on('change', toggleBillingAddress);
             toggleBillingAddress();
 
-            // Show/hide the order-notes textarea
             $addNote.on('change', function() {
                 $notesTextarea.slideToggle(150, function() {
                     if (!$notesTextarea.is(':visible')) {
@@ -483,7 +480,6 @@
                 $notesTextarea.show();
             }
 
-            // Field validation on submit
             $form.on('submit', function(e) {
                 if ($sameAddress.is(':checked')) {
                     copyShippingToBilling();
@@ -558,7 +554,6 @@
                 localStorage.removeItem('checkout_form_data');
             });
 
-            // Persist form input locally so users don't lose their progress
             function saveFormData() {
                 const formData = {};
                 const excluded = ['_token'];
@@ -620,7 +615,6 @@
                 localStorage.removeItem('checkout_form_data');
             @endif
 
-            // Refresh the CSRF token periodically in case the checkout page is left open for a while
             setInterval(function() {
                 if ($submitBtn.prop('disabled')) {
                     return;
